@@ -10,7 +10,6 @@ function App() {
       <Header />
       <Main />
       <NoticeCard />
-      <NoticeButton />
     </div>
   );
 }
