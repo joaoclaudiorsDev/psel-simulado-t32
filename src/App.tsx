@@ -1,10 +1,18 @@
+import Header from "./comṕonents/code-components/Header"
+import Main from "./comṕonents/code-components/Main"
+import NoticeButton from "./comṕonents/code-components/NoticeButton"
+import NoticeCard from "./comṕonents/code-components/NoticeCard"
+
 function App() {
-  
+
   return (
-    <main>
-      <h1> Olá Mundo!</h1>
-    </main>
-  )
+    <div>
+      <Header />
+      <Main />
+      <NoticeCard />
+      <NoticeButton />
+    </div>
+  );
 }
 
 export default App
