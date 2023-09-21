@@ -1,7 +1,7 @@
 const LerMais = ({ link }) => {
     return (
       <a href={link} target="_blank" rel="noopener noreferrer">
-        Leia mais
+        Leia a notícia aqui
       </a>
     );
   };

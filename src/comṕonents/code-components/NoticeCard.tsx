@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { calculateDaysAgo } from "../../utils/dateUtils";
 import { fetchApi } from "./Fetch";
 import LerMais from "./LerMais";
 import NoticeButton from "./NoticeButton";
@@ -34,11 +35,11 @@ function NoticeCard() {
   return (
     <>
       <div>
-        <h2>Mais recentes</h2>
         {noticias.map((noticia) => (
           <div key={noticia.id}>
             <h3>{noticia.titulo}</h3>
             <p>{noticia.introducao}</p>
+            <p>{calculateDaysAgo(noticia.data_publicacao)}</p>
             <LerMais link={noticia.link} />
           </div>
         ))}

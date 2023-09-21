@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { calculateDaysAgo } from "../../utils/dateUtils";
 import {fetchApi} from "./Fetch";
 import LerMais from "./LerMais";
 
@@ -31,6 +32,7 @@ function Main() {
           <h3>Notícia Mais Recente</h3>
           <h2>{latestNews.titulo}</h2>
           <p>{latestNews.introducao}</p>
+          <p>{calculateDaysAgo(latestNews.data_publicacao)}</p>
           <LerMais link={latestNews.link} />
         </>
       ) : (

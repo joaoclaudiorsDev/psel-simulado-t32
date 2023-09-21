@@ -1,13 +1,36 @@
-function NavBar() {
+import React from 'react';
+
+function NavBar({ currentTab, onTabChange }) {
   return (
-    <div>
+    <nav>
       <ul>
-        <li><a href="#mais-recentes">Mais recentes</a></li>
-        <li><a href="#release">Release</a></li>
-        <li><a href="#noticia">Notícia</a></li>
-        <li><a href="#favoritas">Favoritas</a></li>
+        <li
+          className={currentTab === 'mais-recentes' ? 'active' : ''}
+          onClick={() => onTabChange('mais-recentes')}
+        >
+          Mais recentes
+        </li>
+        <li
+          className={currentTab === 'release' ? 'active' : ''}
+          onClick={() => onTabChange('release')}
+        >
+          Release
+        </li>
+        <li
+          className={currentTab === 'noticia' ? 'active' : ''}
+          onClick={() => onTabChange('noticia')}
+        >
+          Notícia
+        </li>
+        <li
+          className={currentTab === 'favoritas' ? 'active' : ''}
+          onClick={() => onTabChange('favoritas')}
+        >
+          Favoritas
+        </li>
       </ul>
-  </div>
-);
+    </nav>
+  );
 }
+
 export default NavBar;
