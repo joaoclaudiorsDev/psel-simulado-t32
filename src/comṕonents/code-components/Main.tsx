@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {fetchApi} from "./Fetch";
+import LerMais from "./LerMais";
 
 function Main() {
   const [latestNews, setLatestNews] = useState(null);
@@ -24,12 +25,13 @@ function Main() {
 
   return (
     <main>
-      <h2>Notícia Mais Recente:</h2>
       {latestNews ? (
         <>
-          <h3>{latestNews.titulo}</h3>
+          <img src={introImageUrl} alt="Imagem da notícia" />
+          <h3>Notícia Mais Recente</h3>
+          <h2>{latestNews.titulo}</h2>
           <p>{latestNews.introducao}</p>
-            <img src={introImageUrl} alt="Imagem da notícia" />
+          <LerMais link={latestNews.link} />
         </>
       ) : (
         <p>Carregando notícia mais recente...</p>

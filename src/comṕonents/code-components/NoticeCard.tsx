@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchApi } from "./Fetch";
+import LerMais from "./LerMais";
 import NoticeButton from "./NoticeButton";
 
 function NoticeCard() {
@@ -38,6 +39,7 @@ function NoticeCard() {
           <div key={noticia.id}>
             <h3>{noticia.titulo}</h3>
             <p>{noticia.introducao}</p>
+            <LerMais link={noticia.link} />
           </div>
         ))}
       </div>
