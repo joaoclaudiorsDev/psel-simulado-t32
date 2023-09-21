@@ -37,7 +37,7 @@ function NoticeCard() {
         {noticias.map((noticia) => (
           <div key={noticia.id}>
             <h3>{noticia.titulo}</h3>
-            <p>{noticia.descricao}</p>
+            <p>{noticia.introducao}</p>
           </div>
         ))}
       </div>

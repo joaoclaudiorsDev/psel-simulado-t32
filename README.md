@@ -1,27 +1,55 @@
-# React + TypeScript + Vite
+# Processo Seletivo Simulado - Pessoa Desenvolvedora Frontend - Teste Técnico 👩‍💻👨‍💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+⚠️  **ATENÇÃO: Essa descrição é apenas um template, faça o Fork desta GIST** ⚠️ 
+ 
+## O que preciso saber para fazer o projeto? 🤔
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Olá, este é o teste de Frontend para pessoas desenvolvedoras junior da Trybe. O objetivo é analisar as habilidades das pessoas candidatas, com foco nos fundamentos principais de React e suas bibliotecas relacionadas.
 
-## Expanding the ESLint configuration
+Para isso, você irá replicar a ideia de um sistema que captura as notícias mais recentes do IBGE e apresentar elas de forma organizada.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Desafio
 
-- Configure the top-level `parserOptions` property like this:
+- Usando a [API gratuita de notícias do IBGE em sua versão 3](https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=100), você será responsável por criar uma listagem com as notícias mais recentes, consultando o endpoint GET /noticias para realizar a listagem.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- Você deve garantir que o usuário possa registrar suas notícias favoritas.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Foi disponibilizado o [layout](https://www.figma.com/file/KAzG24r3c9QCowMCi1LgTl/News-Website-UI-and-Presentation-for-Opportunists-(Community)?type=design&node-id=0%3A1&mode=design&t=DTXcku32oJLZDG1o-1) do figma. Essa é uma versão simplificada, fique a vontade para modificar e incrementar o layout conforme sua preferência e criatividade.
+
+## Requisitos funcionais
+
+- A pessoa usuária deve ter acesso às notícias mais recentes do IBGE
+
+- A pessoa usuária deve conseguir acessar a notícia completa clicando em seu link
+
+- A pessoa usuária deve ter a informação de quantos dias atrás essa notícia foi publicada
+
+- A pessoa usuária deve conseguir favoritar as notícias que mais gostou
+
+- A criação de testes é um importante indicador de que as funcionalidades estão sendo verificadas, como o Mock da API e testes das principais funcionalidades
+
+- A realização do Deploy é um diferencial muito positivo, lembre de enviar o link no readme do seu repositório
+
+## Requisitos não funcionais
+
+- O app deverá ser criado usando [React](https://reactjs.org/)
+
+- Na raiz do projeto, será necessário incluir um arquivo `README.md` com as instruções para construir/rodar seu projeto localmente. Opcionalmente você pode detalhar as razões pelas escolhas de ferramentas e técnicas aplicadas ao desafio.
+
+- O app deverá ser responsivo
+
+## Extras
+
+- Temos insights que nos levam a acreditar que as pessoas usuárias dessa lista costumam ter uma experiência melhor se conseguirem criar filtros nestas notícias. Portanto, existem diversas possibilidades para criar filtros, como por tipo, favoritas, por título, etc.
+
+- A cobertura de testes com o mínimo de 50% pode trazer resultados positivos para garantir um consistente desenvolvimento das funcionalidades
+
+## Critérios de avaliação
+
+- Boas práticas de desenvolvimento como: html semântico, componentização, design patterns, clean code
+- Domínio das ferramentas e linguagens que compõe um app de frontend moderno
+- Documentação: explicação para construir o app localmente, histórico e workflow de git
+
+---
+Obrigado e bom desafio!

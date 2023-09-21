@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { fetchApi } from "./Fetch";
 
 function NoticeButton({ onFetchNews }) {
   const [loaded, setLoaded] = useState(false);
