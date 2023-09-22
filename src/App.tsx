@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FavoritesProvider } from "./comṕonents/code-components/FavoriteButton";
 import Header from "./comṕonents/code-components/Header"
 import Main from "./comṕonents/code-components/Main"
 import NavBar from "./comṕonents/code-components/NavBar";
@@ -12,12 +13,14 @@ function App() {
   };
 
   return (
-    <div>
-      <Header />
-      <Main />
-      <NavBar currentTab={currentTab} onTabChange={handleTabChange} />
-      <Conteudo currentTab={currentTab} />
-    </div>
+    <FavoritesProvider>
+      <div>
+        <Header />
+        <Main />
+        <NavBar currentTab={currentTab} onTabChange={handleTabChange} />
+        <Conteudo currentTab={currentTab} />
+      </div>
+    </FavoritesProvider>
   );
 }
 

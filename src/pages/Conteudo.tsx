@@ -13,8 +13,8 @@ function Notices({ currentTab }){
       //   return <Release />;
       // case 'noticia':
       //   return <Noticia />;
-      // case 'favoritas':
-      //   return <Favoritas />;
+      case 'favoritas':
+        return <Favoritas />;
       default:
         return null;
     }

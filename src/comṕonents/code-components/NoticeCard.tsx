@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { calculateDaysAgo } from "../../utils/dateUtils";
 import { fetchApi } from "./Fetch";
 import LerMais from "./LerMais";
 import NoticeButton from "./NoticeButton";
+import { FavoritesContext } from "./FavoriteButton";
 
 function NoticeCard() {
   const [noticias, setNotices] = useState([]);
+  const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,7 +26,7 @@ function NoticeCard() {
     try {
       const response = await fetchApi();
       if (response.items && response.items.length > 0) {
-        const nextNoticias = response.items.slice(noticias.length -1, noticias.length -1 + 9);
+        const nextNoticias = response.items.slice(noticias.length, noticias.length + 9);
         setNotices([...noticias, ...nextNoticias]);
       }
     } catch (error) {
@@ -37,6 +39,9 @@ function NoticeCard() {
       <div>
         {noticias.map((noticia) => (
           <div key={noticia.id}>
+            <button onClick={() => toggleFavorite(noticia.id, noticia.titulo, noticia.introducao, noticia.data_publicacao, noticia.link)}>
+              {isFavorite(noticia.id) ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+            </button>
             <h3>{noticia.titulo}</h3>
             <p>{noticia.introducao}</p>
             <p>{calculateDaysAgo(noticia.data_publicacao)}</p>
