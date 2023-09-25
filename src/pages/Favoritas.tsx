@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
-import { FavoritesContext } from '../comṕonents/code-components/FavoriteButton';
+import { FavoritesContext } from '../comṕonents/code-components/FavoriteContext';
+import LerMais from '../comṕonents/code-components/LerMais';
+import { calculateDaysAgo } from '../utils/dateUtils';
+import RemoveFavoriteImageButton from '../utils/RemoveFavorite';
 
 const Favoritas = () => {
-  const { favorites, removeFavorite } = useContext(FavoritesContext);
-
-  const handleRemoveFavorite = (id) => {
-    removeFavorite(id);
-  };
+  const { favorites } = useContext(FavoritesContext);
 
   return (
     <div>
@@ -18,8 +17,9 @@ const Favoritas = () => {
               <li key={index}>
                 <h3>{favorite.titulo}</h3>
                 <p>{favorite.introducao}</p>
-                {/* Renderize outras informações da notícia conforme necessário */}
-                <button onClick={() => handleRemoveFavorite(favorite.id)}>Remover dos favoritos</button>
+                <p>{favorite.data_publicacao ? calculateDaysAgo(favorite.data_publicacao) : 'Data de publicação não disponível'}</p>
+                <LerMais link={favorite.link} />
+                <RemoveFavoriteImageButton id={favorite.id} />
               </li>
             ))}
           </ul>

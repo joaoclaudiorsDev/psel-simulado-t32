@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    height: 120px;
+}
+
+.header {
+    background-color: #222222;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+  }
+
+h1 {
+    font-size: 80px;
+}
+
+.trybe-logo {
+    margin-left: 0px;
+    padding: 0;
+    width: 120px;
+}
