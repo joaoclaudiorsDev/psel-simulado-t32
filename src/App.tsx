@@ -4,6 +4,7 @@ import Header from "./comṕonents/code-components/Header"
 import Main from "./comṕonents/code-components/Main"
 import NavBar from "./comṕonents/code-components/NavBar";
 import Conteudo from "./pages/Conteudo";
+import './App.css'
 
 function App() {
   const [currentTab, setCurrentTab] = useState('mais-recentes');
