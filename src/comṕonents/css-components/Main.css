@@ -1,0 +1,38 @@
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.container-main-div {
+  display: flex;
+  align-items: center;
+  max-width: 60%;
+  justify-content: center;
+
+}
+.container-main-notice {
+  margin-left: 50px;
+}
+
+.dayAndLearn {
+  display: flex;
+}
+
+.favoriteImg {
+  width: 20px;
+}
+
+.favoriteNoticeImg {
+  max-width: 600px;
+  max-height: 420px;
+  border: 1px solid black;
+}
+
+.recent-notice-and-favorite-button {
+  display: flex;
+}
+
+#recent-notice-title {
+  color:red;
+}
