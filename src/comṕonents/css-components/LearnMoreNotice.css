@@ -1,0 +1,32 @@
+.learnMoreNotice {
+  background-color: rgb(7, 216, 101);
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.616);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.learnMoreNotice:hover {
+  background-color: rgb(7, 216, 101);
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.616);
+  padding: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}

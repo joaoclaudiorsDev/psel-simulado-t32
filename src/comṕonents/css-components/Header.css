@@ -1,6 +1,6 @@
 header{
     display: flex;
-    height: 220px;
+    height: 175px;
 }
 
 .header {
@@ -13,11 +13,11 @@ header{
 }
 
 h1 {
-    font-size: 100px;
+    font-size: 90px;
 }
 
 .trybe-logo {
     margin-left: 0px;
     padding: 0;
-    width: 220px;
+    width: 200px;
 }

@@ -1,9 +1,9 @@
-import React from 'react';
+import '../css-components/NavBar.css'
 
 function NavBar({ currentTab, onTabChange }) {
   return (
-    <nav>
-      <ul>
+    <nav className='container-div-bar'>
+      <ul className='container-list-bar'>
         <li
           className={currentTab === 'mais-recentes' ? 'active' : ''}
           onClick={() => onTabChange('mais-recentes')}

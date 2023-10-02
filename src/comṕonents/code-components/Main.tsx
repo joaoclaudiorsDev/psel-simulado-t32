@@ -49,7 +49,7 @@ function Main() {
             <h2>{latestNews.titulo}</h2>
             <p>{latestNews.introducao}</p>
             <div className="dayAndLearn">
-              <p>{calculateDaysAgo(latestNews.data_publicacao)}</p>
+              <p className="dayAgo">{calculateDaysAgo(latestNews.data_publicacao)}</p>
               <LerMais link={latestNews.link} />
             </div>
           </div>
