@@ -1,7 +1,7 @@
 .learnMoreNotice {
   background-color: rgb(7, 216, 101);
-  width: 150px;
-  height: 30px;
+  width: 10rem;
+  height:2rem;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -11,16 +11,13 @@
   transition: 0.2s ease-in-out;
 }
 .learnMoreNotice:hover {
-  background-color: rgb(7, 216, 101);
-  width: 150px;
-  height: 30px;
+  background-color: rgb(0, 194, 87);
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.616);
-  padding: 4px;
 }
 
 a {

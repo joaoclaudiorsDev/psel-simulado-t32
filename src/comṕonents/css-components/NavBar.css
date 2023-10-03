@@ -2,14 +2,14 @@
     display: flex;
     width: 80%;
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
     background-color: aliceblue;
-    height: 60px;
+    height: 5rem;
     text-align: center;
     align-items: center;
-    border-radius: 5px;
-    font-size: 15px;
+    border-radius: 10px;
+    font-size: 1.4rem;
   }
   
   .container-list-bar {
@@ -23,13 +23,10 @@
   }
   
   .container-list-bar li {
-    margin: 0 15px;
-    transition: 0.2s ease-in-out;
+    margin: 0 1.3rem;
   }
   
   .container-list-bar li.active {
-    border-bottom: 1px solid red;
-    font-size: 16px;
+    border-bottom: 0.2rem solid red;
     cursor: pointer;
-    padding: 2px;
   }

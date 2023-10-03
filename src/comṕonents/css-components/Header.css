@@ -1,6 +1,6 @@
 header{
     display: flex;
-    height: 175px;
+    height: 14rem;
 }
 
 .header {
@@ -19,5 +19,5 @@ h1 {
 .trybe-logo {
     margin-left: 0px;
     padding: 0;
-    width: 200px;
+    width: 18rem;
 }

@@ -1,0 +1,7 @@
+.wrapper-container-notice {
+  display: grid;
+  width: 80%;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
