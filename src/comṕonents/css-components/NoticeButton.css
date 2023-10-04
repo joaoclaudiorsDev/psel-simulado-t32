@@ -1,0 +1,16 @@
+.lern-more-notices-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.learn-more-notices-button {
+    width: 14rem;
+    padding: 1.3rem;
+    background-color: none;
+    color: rgb(190, 0, 0);
+    font-size: 1rem;
+    border-color: rgba(255, 93, 93, 0.185);
+}

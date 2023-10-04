@@ -38,28 +38,32 @@ function NoticeCard() {
 
   return (
     <>
-      <div className="wrapper-container-notice">
-        {noticias.map((noticia) => (
-          <div>
-            <div className="notice-list" key={noticia.id}>
-              <h3>{noticia.titulo}</h3>
-              <p>{noticia.introducao}</p>
-              <p>{calculateDaysAgo(noticia.data_publicacao)}</p>
-              <LerMais link={noticia.link} />
-            </div>
+      <div className="main-wrapper-container-notice">
+        <div className="jr-wrapper-container-notice">
+          {noticias.map((noticia) => (
             <div>
-              <FavoriteImageButton
-              id={noticia.id}
-              isFavorite={isFavorite(noticia.id)}
-              toggleFavorite={toggleFavorite}
-              titulo={noticia.titulo}
-              introducao={noticia.introducao}
-              data_publicacao={noticia.data_publicacao}
-              link={noticia.link}
-            />
+              <div className="notice-list" key={noticia.id}>
+                <h3>{noticia.titulo}</h3>
+                <p>{noticia.introducao}</p>
+                <div className="dayAndLearn">
+                  <p>{calculateDaysAgo(noticia.data_publicacao)}</p>
+                  <LerMais link={noticia.link} />
+                </div>
+              </div>
+              <div className="favorite-notice-button-box">
+                <FavoriteImageButton
+                id={noticia.id}
+                isFavorite={isFavorite(noticia.id)}
+                toggleFavorite={toggleFavorite}
+                titulo={noticia.titulo}
+                introducao={noticia.introducao}
+                data_publicacao={noticia.data_publicacao}
+                link={noticia.link}
+              />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <NoticeButton onFetchNews={handleFetchNews} />
     </>

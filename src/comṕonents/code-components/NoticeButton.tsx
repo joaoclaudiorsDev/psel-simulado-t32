@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../css-components/NoticeButton.css'
 
 function NoticeButton({ onFetchNews }) {
   const [loaded, setLoaded] = useState(false);
@@ -15,9 +16,9 @@ function NoticeButton({ onFetchNews }) {
   };
 
   return (
-    <div>
-      <button onClick={handleClick} disabled={loaded}>
-        {loaded ? "Carregando..." : "Mais Notícias"}
+    <div className="lern-more-notices-container">
+      <button className="learn-more-notices-button" onClick={handleClick} disabled={loaded}>
+        {loaded ? "Carregando..." : "MAIS NOTÍCIAS"}
       </button>
     </div>
   );
