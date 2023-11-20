@@ -43,8 +43,12 @@ function NoticeCard() {
           {noticias.map((noticia) => (
             <div>
               <div className="notice-list" key={noticia.id}>
-                <h3>{noticia.titulo}</h3>
-                <p>{noticia.introducao}</p>
+                <div className="cardNoticeTitle">
+                  <h3>{noticia.titulo}</h3>
+                </div>
+                <div className="cardNoticeDescription">
+                  <p>{noticia.introducao}</p>
+                </div>
                 <div className="dayAndLearn">
                   <p>{calculateDaysAgo(noticia.data_publicacao)}</p>
                   <LerMais link={noticia.link} />

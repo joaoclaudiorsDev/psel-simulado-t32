@@ -38,6 +38,11 @@ h2 {
   width: 1.2rem;
 }
 
+.favoriteImg:hover {
+  width: 1.2rem;
+  cursor: pointer;
+}
+
 .favoriteNoticeImg {
   height: 30rem;
   width: 150rem;

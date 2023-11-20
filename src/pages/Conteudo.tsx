@@ -20,7 +20,7 @@ function Notices({ currentTab }){
     }
   };
   return (
-    <div>
+    <div className="nessaDivEuNaoToco">
       {renderContent()}
     </div>
   );

@@ -8,9 +8,10 @@ import { FavoritesContext } from "./FavoriteContext";
 
 function Main() {
   const [latestNews, setLatestNews] = useState(null);
-  const imageDetails = JSON.parse('{"image_intro":"images\\/agenciadenoticias\\/estatisticas_economicas\\/2023_09\\/PPM_THUMB_Jaelson-Lucas-AEN-PR.jpg","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/agenciadenoticias\\/estatisticas_economicas\\/2023_09\\/PPM_HOME_Jaelson-Lucas-AEN-PR.jpg","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}');
-  const introImageUrl = `https://agenciadenoticias.ibge.gov.br/${imageDetails.image_intro}`;
+  // const imageDetails = JSON.parse('{"image_intro":"images\\/agenciadenoticias\\/estatisticas_economicas\\/2023_09\\/PPM_THUMB_Jaelson-Lucas-AEN-PR.jpg","float_intro":"","image_intro_alt":"","image_intro_caption":"","image_fulltext":"images\\/agenciadenoticias\\/estatisticas_economicas\\/2023_09\\/PPM_HOME_Jaelson-Lucas-AEN-PR.jpg","float_fulltext":"","image_fulltext_alt":"","image_fulltext_caption":""}');
+  // const introImageUrl = `https://agenciadenoticias.ibge.gov.br/${imageDetails.image_intro}`;
   const { toggleFavorite, isFavorite } = useContext(FavoritesContext);
+  const introImageUrl = latestNews ? `https://agenciadenoticias.ibge.gov.br/${JSON.parse(latestNews.imagens).image_intro}` : '';
 
 
   useEffect(() => {
@@ -32,7 +33,7 @@ function Main() {
     <main>
       {latestNews ? (
         <div className="container-main-div">
-          <img src={introImageUrl} alt="Imagem da notícia"  className="favoriteNoticeImg"/>
+          <img src={introImageUrl} alt="Imagem da notícia" className="favoriteNoticeImg"/>
           <div className="container-main-notice">
             <div className="recent-notice-and-favorite-button">
               <h3 id="recent-notice-title">Notícia mais recente</h3>

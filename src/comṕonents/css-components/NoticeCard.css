@@ -27,6 +27,16 @@
   margin-right: 6%;
 }
 
+.cardNoticeTitle{
+  min-height: 117px;
+  max-height: 117px;
+}
+
+.cardNoticeDescription{
+  min-height: 110px;
+  max-height: 110px;
+}
+
 .dayAndLearn {
   color: rgb(107, 107, 107);
   margin-right: 5%;
